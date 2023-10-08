@@ -7,5 +7,7 @@ solc_version = "0.8.17"
 # this is if we want to turn on or turn off the optimizer and for how many runs
 optimizer = true
 optimizer_runs=200
+#This is one way of remmaping which was taught by Patrick
+
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
