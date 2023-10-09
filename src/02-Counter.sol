@@ -12,7 +12,7 @@ contract Counter {
 
     //Function to increment by 1
     function increment() public {
-        console.log("Here",count);
+        console.log("Here", count);
         count += 1;
     }
 
