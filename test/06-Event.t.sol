@@ -16,7 +16,6 @@ contract EventTest is Test{
     //First we are going to test a single event
     function testEmitTransferEvent() public{
         //To test wether the evevnt was emiited or not we are going to call vm.expectEmit which takes in 4 inputs
-
         //To do this we have 3 steps we need to follow and they are as follows
 
         // 1. Tell Foundry which data to check
@@ -30,6 +29,7 @@ contract EventTest is Test{
 
         // 3. Call the function that should emit the event
         e.transfer(address(this),address(123),456);
+        
         // If the event emitted in step 2 is equal to the event emitted in step 3 then our test will pass 
 
         //Now we can just test for particulary a specific index also ,this will just check for index 1
