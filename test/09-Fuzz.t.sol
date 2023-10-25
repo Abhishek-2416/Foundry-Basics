@@ -10,8 +10,8 @@ import {Bit} from "../src/09-Bit.sol";
  * stats:- This shows the stats when you fuzz a test μ and ~
  */
 /**Note
- * μ: 19396 This is the mean amount of gas used
- * ~: 10396 This is the median amount of gas used
+ * μ: 19396 This is the mean amount of gas that is been used
+ * ~: 10396 This is the median amount of gas that is been sused
  */
 
 contract FuzzTest is Test {
@@ -30,12 +30,13 @@ contract FuzzTest is Test {
         return i;
     }
 
-    //First testing the normal way
+    //First testing the normal way that is uint testing
     function testMostSignificantBitManual() public{
         assertEq(b.mostSignificantBit(0),0);
         assertEq(b.mostSignificantBit(1),0);
         assertEq(b.mostSignificantBit(2),1);
         assertEq(b.mostSignificantBit(4),2);
+        assertEq(b.mostSignificantBit(8),3);
     }
 
     //It is absurd to keep calculating for all the values so we use fuzz test for this
