@@ -37,14 +37,6 @@ contract EventTest is Test{
         vm.expectEmit(true,false,false,false);
         emit Transfer(address(this),address(123),456);
         e.transfer(address(this),address(12323),45643);
-
-        /**
-         * @dev Here we need to make sure that we follow this steps in this order
-         * First we need to vm.expectEmit function
-         * Second we need to emit the Transfer function
-         * Third we need to call the function which will emit the event
-         */
-
     }
 
     //Now let us check for multiple events
